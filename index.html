@@ -1,0 +1,71 @@
+<style>
+/* faq */
+.faqList {border-top:2px #231f20 solid; word-break:keep-all;}
+.faqList:after {content:""; display:block; clear:both;}
+.faqList ul li {position:relative; width:100%; border-bottom:1px #e5e5e5 solid; overflow:hidden;}
+.faqList ul li .question {width:100%; padding:20px 0; line-height:1.2; overflow:hidden;}
+.faqList ul li .question .blet {position:absolute; left:32px; top:12px;}
+.faqList ul li .question .title {font-size:14px; color:#333; margin:0 20px 0 84px; line-height:1.4;}
+
+.faqanswer {display:none; width:100%; background:#fafafa; overflow:hidden; clear:both;}
+.faqanswer .faqbox {position:relative; border-top:1px #e5e5e5 solid; padding:26px 0;}
+.faqanswer .faqbox:after {content:""; display:block; clear:both;}
+.faqanswer .faqbox .blet {position:absolute; left:32px; top:28px;}
+.faqanswer .faqbox .text {font-size:14px; color:#666; line-height:1.8; margin:0 20px 0 84px;}
+.faqanswer .faqbox .text * {font-size:14px; color:#666; line-height:1.8;}
+</style>
+
+
+
+<div class="faqList">
+  <ul>
+    <li>
+      <a href="javascript:;" class="faqbtn">
+        <div class="question">
+          <div class="blet"><img src="/ico/ico_q.png" alt="Q" /></div>
+          <div class="title">제목입니다.</div>
+        </div>
+      </a>
+
+      <div class="faqanswer">
+        <div class="faqbox">
+          <div class="blet"><img src="/ico/ico_a.png" alt="A" /></div>
+          <div class="text">
+            내용입니다.
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+
+
+<script type="text/javascript">
+$(function(){
+
+	// Faq list
+	$(".faqbtn").click(function () {
+		$(".arrow").each(function(){
+			var tarImg = $(this).children('img');
+			var imgNm = tarImg.attr('src');
+			if (imgNm != null || imgNm!='') {
+				imgNm=imgNm.replace('_on','_off');
+				tarImg.attr('src',imgNm);
+			}
+		});
+
+		if( $(this).parent().is(".hover") ){			
+			$(this).parent().removeClass("hover")
+			$(".faqanswer").hide(300)
+		}else{
+			$(".faqanswer").hide(300)
+			$(".faqbtn").parent().removeClass("hover")
+			$(this).siblings(".faqanswer").show(300).parent().addClass("hover");
+			$(this).siblings(".arrow").children("img").attr("src",$(this).siblings(".arrow").children("img").attr("src").replace("_off","_on"));
+		}
+	});
+  
+});
+</script>
