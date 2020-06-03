@@ -66,6 +66,22 @@ $(function(){
 			$(this).siblings(".arrow").children("img").attr("src",$(this).siblings(".arrow").children("img").attr("src").replace("_off","_on"));
 		}
 	});
+	
+	
+	// Faq list (포카리스웨트)
+	$(".title a").each(function () {
+		$(this).bind('click', function(){
+
+			if( $(this).parent().parent().is(".on") ){
+				$(".title a").parent().parent().removeClass("on")
+				$(this).parent().siblings(".inBox").hide(300)
+			}else{
+				$(".inBox").hide(300);
+				$(".title a").parent().parent().removeClass("on");
+				$(this).parent().siblings(".inBox").show(300).parent().addClass("on");
+			}
+		});
+	});
   
 });
 </script>
