@@ -121,3 +121,24 @@ style
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+script
+
+// Faq list
+	$(".faqbtn").click(function () {
+
+		if( $(this).parent().is(".enter") ){			
+			$(this).parent().removeClass("enter")
+			$(".faqAnswer").hide(300)
+		}else{
+			$(".faqAnswer").hide(300)
+			$(".faqbtn").parent().removeClass("enter")
+			$(this).siblings(".faqAnswer").show(300).parent().addClass("enter");
+		}
+	});
