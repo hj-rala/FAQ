@@ -130,6 +130,22 @@ style
 
 script
 
+
+//tab contents
+	$('.tabs2 ul li > a').each(function(){
+		$(this).bind('click', function(e){
+			e.preventDefault();
+			$('.tabCont').css('display','none');
+			$('.tabs2 ul li > a').removeClass('on');
+			
+			var contLink = $(this).attr('href');
+			$(contLink).css('display','block');
+			$(this).addClass('on');
+		});
+	});
+	$('.tabs2 ul li:eq(0) a').click();
+
+
 // Faq list
 	$(".faqbtn").click(function () {
 
