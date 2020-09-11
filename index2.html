@@ -1,0 +1,123 @@
+style
+
+
+.faqWrap {width: 100%; overflow: hidden;}
+.faqWrap .faqList {border-top:4px #588beb solid; word-break:keep-all;}
+.faqWrap .faqList .blet {position:absolute; left:40px; top:33px; display: inline-block; width: 58px; height: 58px; line-height: 100%; padding-top: 13px; font-size: 26px; background: #588beb; border-radius: 50%; text-align: center;}
+.faqWrap .faqList:after {content:""; display:block; clear:both;}
+.faqWrap .faqList ul li {position:relative; width:100%; border-bottom:1px #dddee3 solid; overflow:hidden;}
+.faqWrap .faqList ul li .qBox {position: relative; width:100%; padding:33px 40px; line-height:1.2; overflow:hidden;}
+.faqWrap .faqList ul li .qBox .blet { color: #fff;}
+.faqWrap .faqList ul li .qBox .title {font-size:24px; color:#202020; font-weight: 300; margin:11px 0; line-height:1.5; padding: 0 40px 0 88px;}
+.faqWrap .faqList ul li .qBox:after {content: ""; display: inline-block; position: absolute; top: 58px; right: 40px; width: 22px; height: 12px; background: url('../images/sub/ico_faq_arrow.png') 0 0 no-repeat; /* -webkit-transition:all 0.3s; -moz-transition:all 0.3s; -o-transition:all 0.3s; transition:all 0.3s; */}
+.faqWrap .faqList ul li.enter .qBox:after {background: url('../images/sub/ico_faq_arrow_on.png') 0 0 no-repeat;}
+
+.faqWrap .faqAnswer {display:none; width:100%; background:#f2f6ff ; overflow:hidden; clear:both;}
+.faqWrap .faqAnswer .fBox {position:relative; border-top:1px #dddee3 solid; padding:33px 40px;}
+.faqWrap .faqAnswer .fBox:after {content:""; display:block; clear:both;}
+.faqWrap .faqAnswer .fBox .blet {color: #588beb; background: #fff;}
+.faqWrap .faqAnswer .fBox .text {font-size:24px; color:#202020; font-weight: 300; margin:11px 0; line-height:1.5; padding-left: 88px;}
+
+@media all and (max-width: 768px){
+  .faqWrap .faqList .blet {left: 10px; top: 16px; width: 25px; height: 25px; font-size: 11px; padding-top: 7px; letter-spacing: 1px;}
+	.faqWrap .faqList ul li .qBox {padding: 10px 0;}
+	.faqWrap .faqList ul li .qBox .title {font-size: 16px; padding: 0 30px 0 40px; margin: 6px 0;}
+	.faqWrap .faqList ul li .qBox:after {top: 26px; right:10px; width: 11px; height: 7px; background-size: 100%;}
+	.faqWrap .faqList ul li.enter .qBox:after {background-size: 100%;}
+	.faqWrap .faqAnswer .fBox {padding: 10px 0;}
+	.faqWrap .faqAnswer .fBox .text {font-size: 16px; padding: 0 30px 0 40px; margin: 6px 0;}
+}
+
+
+
+
+
+
+
+<div class="faqWrap">
+  <div class="tabArea">
+    <div class="tabs2">
+      <ul>
+        <li><a href="#menu01">미니케어</a></li>
+        <li><a href="#menu02">미니보험</a></li>
+        <li><a href="#menu03">리워드</a></li>
+      </ul>
+    </div>
+    <div id="menu02" class="tabCont">
+      <div class="faqList">
+        <ul>
+
+
+          <li>
+            <a href="javascript:;" class="faqbtn">
+              <div class="qBox">
+                <div class="blet">Q</div>
+                <div class="title">미니보험에 가입할 경우, 어떤 장점이 있나요?</div>
+              </div>
+            </a>
+
+            <div class="faqAnswer">
+              <div class="fBox">
+                <div class="blet">A</div>
+                <div class="text">
+                  24시간 365일 고객님께서 원하실 때, 언제든 보험가입을 하실 수가 있어요.<br/>누구나 쉽게 보험을 설계하고 상품을 비교하실 수 있도록 화면을 구성했어요.
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <a href="javascript:;" class="faqbtn">
+              <div class="qBox">
+                <div class="blet">Q</div>
+                <div class="title">인터넷을 통해 보험에 가입할 경우, 어떤 장점이 있나요?</div>
+              </div>
+            </a>
+
+            <div class="faqAnswer">
+              <div class="fBox">
+                <div class="blet">A</div>
+                <div class="text">
+                  24시간 365일 고객님께서 원하실 때, 언제든 보험가입을 하실 수가 있어요.<br/>누구나 쉽게 보험을 설계하고 상품을 비교하실 수 있도록 화면을 구성했어요.
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <a href="javascript:;" class="faqbtn">
+              <div class="qBox">
+                <div class="blet">Q</div>
+                <div class="title">인터넷을 통해 보험에 가입할 경우, 어떤 장점이 있나요?</div>
+              </div>
+            </a>
+
+            <div class="faqAnswer">
+              <div class="fBox">
+                <div class="blet">A</div>
+                <div class="text">
+                  24시간 365일 고객님께서 원하실 때, 언제든 보험가입을 하실 수가 있어요.<br/>누구나 쉽게 보험을 설계하고 상품을 비교하실 수 있도록 화면을 구성했어요.
+                </div>
+              </div>
+            </div>
+          </li>
+
+
+        </ul>
+
+        <div class="paging">
+          <a href="javascript:;" class="first"></a>
+          <a href="javascript:;" class="prev"></a>
+          <a href="javascript:;" class="on">1</a>
+          <a href="javascript:;">2</a>
+          <a href="javascript:;">3</a>
+          <a href="javascript:;">4</a>
+          <a href="javascript:;">5</a>
+          <a href="javascript:;" class="next"></a>
+          <a href="javascript:;" class="last"></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
