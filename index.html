@@ -82,6 +82,19 @@ $(function(){
 			}
 		});
 	});
+	
+	$(".q-boxTit").each(function () {
+		$(this).bind('click', function(){
+			if( $(this).parent().is(".on") ){
+				$(".q-boxTit").parent().removeClass("on")
+				$(this).siblings(".q-con").slideUp(300)
+			}else{
+				$(".q-con").slideUp(300);
+				$(".q-boxTit").parent().removeClass("on");
+				$(this).siblings('.q-con').slideDown(300).parent().addClass("on");
+			}
+		});
+	});
   
 });
 </script>
